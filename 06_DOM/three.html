@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+   <div class="container">
+        <ul class="language">
+            <li class="list">JavaScript</li>
+        </ul>
+    </div>
+</body>
+<script>
+    function addLang(langName) {
+       const li =  document.createElement('li');
+       li.innerHTML = `${langName}`;
+       document.querySelector('.language').appendChild(li);
+   }
+   
+
+   // opt method
+   function addLanguage(langName) {
+    const li = document.createElement('li');
+       const languageName = document.createTextNode(langName);
+       li.appendChild(languageName);
+       document.querySelector('.language').appendChild(li);
+   }
+   addLanguage('amdhuf');
+   addLang('tedtd');
+
+   //edit
+
+   const li = document.querySelector('li:nth-child(2)');
+  // li.textContent = 'HTML CSS';
+
+   const newLi = document.createElement('li');
+   newLi.textContent = 'JavaFoundetion';
+   li.replaceWith(newLi);
+
+   const firstLi = document.querySelector('li:first-child');
+   firstLi.outerHTML = '<li>Languages </li>';
+
+   //remove
+   const lastli = document.querySelector('li:last-child');
+   lastli.remove();
+</script>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Three</title>
+
+</head>
+<body>
+    <h1>Welcome Events three </h1>
+    <h2>Loop Start <button id="start">Start</button></h2>
+    <p></p>
+    <h2>Loop Stop <button id="stop">Stop</button></h2>
+</body>
+<script>
+    const start = document.querySelector("#start");
+    const startInv = setInterval(function () {
+       document.querySelector('p').innerHTML =  new Date().toDateString();
+    }, 2000);
+    start.addEventListener('click', function(e) {
+          console.log('helo', startInv);
+          document.querySelector('p').innerHTML = new Date().toLocaleTimeString();
+
+
+    });
+</script>
+</html>

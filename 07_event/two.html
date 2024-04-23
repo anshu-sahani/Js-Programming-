@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Listener</title>
+</head>
+<body>
+    <h1>Hello Welcome to Anshu Sites !</h1>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    const changeHeader = function() {
+        document.querySelector('h1').innerHTML = 'Welcome to Chai Aur Code!';
+        console.log('header Chhanged !');
+    }
+     const chageMe =  setTimeout(changeHeader, 3000);
+       
+     const stopChanger = document.querySelector('#stop');
+     stopChanger.addEventListener('click', function() {
+        clearTimeout(chageMe);
+        console.log('header Chager Is Stopped !');
+     })
+    </script>
+</html>
